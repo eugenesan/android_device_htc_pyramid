@@ -34,7 +34,7 @@ LOCAL_CFLAGS += LEGACY_LPA
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-TARGET_KERNEL_CONFIG := SebastianFM_defconfig_defconfig
+TARGET_KERNEL_CONFIG := senny_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/pyramid
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pyramid/include
 
