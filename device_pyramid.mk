@@ -58,11 +58,11 @@ PRODUCT_COPY_FILES += device/htc/pyramid/configs/thermald.conf:system/etc/therma
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-	device/htc/pyramid/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-	device/htc/pyramid/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
-	device/htc/pyramid/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-	device/htc/pyramid/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
-	device/htc/pyramid/keylayout/pyramid-keypad.kl:system/usr/keylayout/pyramid-keypad.kl
+    device/htc/pyramid/keychars/pyramid-keypad.kcm:system/usr/keychars/pyramid-keypad.kcm \
+    device/htc/pyramid/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/pyramid/keylayout/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl \
+    device/htc/pyramid/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/pyramid/keylayout/pyramid-keypad.kl:system/usr/keylayout/pyramid-keypad.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
