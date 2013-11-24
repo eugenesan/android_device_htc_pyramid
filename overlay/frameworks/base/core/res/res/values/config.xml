@@ -195,4 +195,6 @@
         <item>dualmic_enabled=true=false</item>
     </string-array>
 
+    <!-- Disable lockscreen translucent decor by default -->
+    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 </resources>
