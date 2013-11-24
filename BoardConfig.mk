@@ -25,7 +25,7 @@ BOARD_VENDOR := htc
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-TARGET_BOOTLOADER_BOARD_NAME := villec2
+TARGET_BOOTLOADER_BOARD_NAME := pyramid
 BOARD_WANTS_EMMC_BOOT := true
 TARGET_CPU_VARIANT := cortex-a9
 TARGET_LEGACY_LPA := true
@@ -34,11 +34,11 @@ LOCAL_CFLAGS += LEGACY_LPA
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-TARGET_KERNEL_CONFIG := villec2_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/villec2
-TARGET_SPECIFIC_HEADER_PATH := device/htc/villec2/include
+TARGET_KERNEL_CONFIG := SebastianFM_defconfig_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/pyramid
+TARGET_SPECIFIC_HEADER_PATH := device/htc/pyramid/include
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=villec2 no_console_suspend=1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1 androidboot.selinux=permissive
 
 # Board
 TARGET_BOARD_PLATFORM := msm8660
@@ -58,8 +58,6 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # we are using prebuilt in vendor tree
 TARGET_QCOM_DISPLAY_VARIANT := legacy
-TARGET_QCOM_MEDIA_VARIANT := villec2
-
 
 # FB legacy
 BOARD_EGL_NEEDS_LEGACY_FB := true
@@ -83,14 +81,14 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/villec2/bluetooth/vnd_msm8660.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/villec2/bluetooth/include
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/pyramid/bluetooth/vnd_msm8660.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/pyramid/bluetooth/include
 
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-BOARD_EGL_CFG := device/htc/villec2/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/pyramid/configs/egl.cfg
 # Filesystem
 BOARD_VOLD_MAX_PARTITIONS := 36
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
@@ -103,14 +101,14 @@ BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 # GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := villec2
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pyramid
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 TARGET_PROVIDES_LIBLIGHTS := true
 
 # Bluetooth/Wifi
--include device/htc/villec2/bcmdhd.mk
+-include device/htc/pyramid/bcmdhd.mk
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -122,7 +120,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/htc/villec2/ramdisk/fstab.villec2
+TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
 
 # Webkit
 ENABLE_WEBGL := true
