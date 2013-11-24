@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := villec2
+PRODUCT_RELEASE_NAME := pyramid
 
 TARGET_BOOTANIMATION_NAME := vertical-540x960
 
@@ -10,13 +10,13 @@ TARGET_BOOTANIMATION_NAME := vertical-540x960
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/htc/villec2/device_villec2.mk)
+$(call inherit-product, device/htc/pyramid/device_pyramid.mk)
 
 # Device naming
-PRODUCT_DEVICE := villec2
-PRODUCT_NAME := cm_villec2
+PRODUCT_DEVICE := pyramid
+PRODUCT_NAME := cm_pyramid
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC One S
+PRODUCT_MODEL := HTC Sensation
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
