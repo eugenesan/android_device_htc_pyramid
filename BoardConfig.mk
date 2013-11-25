@@ -124,6 +124,9 @@ TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
+# Sensors
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+
 # Camera
 USE_CAMERA_STUB := false
 TARGET_PROVIDES_CAMERA_HAL := true
