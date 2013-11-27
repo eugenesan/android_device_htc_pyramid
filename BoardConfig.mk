@@ -120,6 +120,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
+USE_SET_METADATA := false
 
 # Webkit
 ENABLE_WEBGL := true
