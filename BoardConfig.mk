@@ -68,7 +68,6 @@ LOCAL_CFLAGS += LEGACY_LPA
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_QCOM_DISPLAY_VARIANT := legacy
 
 # QCOM BSP (Board Support Package)
 TARGET_USES_QCOM_BSP := true
