@@ -37,12 +37,13 @@ PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+# PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.msm8660 \
+    audio_policy.conf \
     audio.primary.msm8660 \
     audio.usb.default \
     libaudio-resampler \
