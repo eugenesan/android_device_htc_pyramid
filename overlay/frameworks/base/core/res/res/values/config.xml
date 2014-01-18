@@ -53,6 +53,7 @@
         <item>321</item>
         <item>641</item>
         <item>1281</item>
+        <item>1951</item>
         <item>2601</item>
     </integer-array>
 
@@ -61,15 +62,16 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>45</item>
-        <item>50</item>
-        <item>55</item>
-        <item>75</item>
-        <item>105</item>
-        <item>125</item>
-        <item>150</item>
-        <item>180</item>
-        <item>200</item>
+        <item>40</item>
+        <item>40</item>
+        <item>44</item>
+        <item>59</item>
+        <item>79</item>
+        <item>94</item>
+        <item>130</item>
+        <item>155</item>
+        <item>182</item>
+        <item>209</item>
         <item>255</item>
     </integer-array>
 
@@ -142,7 +144,7 @@
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
-	    <item>"usb\\d"</item>
+        <item>"rndis0"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -168,6 +170,9 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
+
+    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
+    <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
 
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each

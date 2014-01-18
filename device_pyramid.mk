@@ -40,8 +40,6 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/ramdisk/ueventd.pyramid.rc:root/ueventd.pyramid.rc \
     device/htc/pyramid/ramdisk/remount.pyramid:root/remount.pyramid
 
-  
-
 ## recovery and custom charging
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
@@ -49,12 +47,9 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
     device/htc/pyramid/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
     device/htc/pyramid/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt
-    
-      
-      
+
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/pyramid/configs/thermald.conf:system/etc/thermald.conf
-
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
@@ -106,7 +101,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
+    dalvik.vm.dexopt-flags=m=y \
+    ro.goo.version=$(shell date +%s)
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

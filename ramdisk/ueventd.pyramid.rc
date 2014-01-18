@@ -99,7 +99,3 @@
 
 # simlock
 /dev/simlock            0660    radio       radio
-
-# mtp
-/dev/mtp_usb            0660    root        mtp
-
