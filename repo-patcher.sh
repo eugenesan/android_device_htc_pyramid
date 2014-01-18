@@ -9,5 +9,5 @@ git reset --hard && git clean -f -d
 patch -p1 < ../../../device/htc/pyramid/patches/packages-apps-torch.patch
 cd ../../../build
 git reset --hard && git clean -f -d
-patch -p1 < ../device/htc/pyramid/patches/build-use-set-metadata.patch
+patch -p1 < ../device/htc/pyramid/patches/build.patch
 cd ../
