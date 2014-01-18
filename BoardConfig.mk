@@ -37,7 +37,7 @@ BUILD_KERNEL := true
 TARGET_KERNEL_CONFIG := senny_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/pyramid
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pyramid/include
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 
 # Board
 TARGET_BOARD_PLATFORM := msm8660
@@ -141,3 +141,32 @@ RECOVERY_FSTAB_VERSION := 2
 
 # Use libril in the device tree
 BOARD_USES_LEGACY_RIL := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/htc/pyramid/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    app.te \
+    bluetooth.te \
+    device.te \
+    domain.te \
+    drmserver.te \
+    file_contexts \
+    files \
+    file.te \
+    hci_init.te \
+    healthd.te \
+    init.te \
+    init_shell.te \
+    keystore.te \
+    kickstart.te \
+    mediaserver.te \
+    rild.te \
+    surfaceflinger.te \
+    system.te \
+    ueventd.te \
+    untrusted_app.te \
+    vold.te \
+    wpa.te \
+    wpa_socket.te
