@@ -43,30 +43,10 @@ lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
 
-# Config files
-etc/agps_rm
-etc/calibration
-
 # Firmware
-etc/firmware/vidc.b01
-etc/firmware/BCM4330B1_002.001.003.0833.0845.hcd
-etc/firmware/a225_pfp.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/vidc.b02
 etc/firmware/leia_pm4_470.fw
 etc/firmware/leia_pfp_470.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/vidc.b00
-etc/firmware/fw_bcm4330_p2p_b2.bin
-etc/firmware/fw_bcm4330_apsta_b2.bin
-etc/firmware/a225_pm4.fw
-etc/firmware/vidc.b03
 etc/firmware/vidc_1080p.fw
-etc/firmware/fw_bcm4330_b2.bin
-etc/firmware/a225p5_pm4.fw
-etc/firmware/default_bak.acdb
-etc/firmware/vidcfw.elf
-etc/firmware/vidc.mdt
 
 # Graphics
 lib/egl/eglsubAndroid.so
@@ -107,4 +87,3 @@ lib/libmpl.so
 
 # Webkit
 lib/libv8.so
-
