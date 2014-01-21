@@ -115,7 +115,7 @@ PRODUCT_LOCALES += en_US hdpi
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 
-$(call inherit-product-if-exists, vendor/htc-extra/pyramid/pyramid-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/pyramid/media_a1026.mk)
 
