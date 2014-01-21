@@ -81,7 +81,6 @@ esac
 case "$target" in
     "msm8660")
         start mpdecision
-        start thermald
     ;;
 esac
 

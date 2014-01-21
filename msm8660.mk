@@ -107,9 +107,6 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/pyramid/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-# Thermal configuration
-PRODUCT_COPY_FILES += \
-    device/htc/pyramid/configs/thermald.conf:system/etc/thermald.conf
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
