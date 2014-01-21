@@ -1,0 +1,6 @@
+[
+   {
+     "repository": "senny_kernel-3.4",
+     "target_path": "kernel/htc/pyramid"
+   }
+]
