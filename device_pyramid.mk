@@ -48,9 +48,6 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
     device/htc/pyramid/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/pyramid/configs/thermald.conf:system/etc/thermald.conf
-
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/keychars/pyramid-keypad.kcm:system/usr/keychars/pyramid-keypad.kcm \
@@ -115,7 +112,7 @@ PRODUCT_LOCALES += en_US hdpi
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
 
-$(call inherit-product-if-exists, vendor/htc/pyramid/pyramid-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc-extra/pyramid/pyramid-vendor.mk)
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/pyramid/media_a1026.mk)
 
