@@ -161,6 +161,9 @@ BOARD_USES_LEGACY_RIL := true
 # Misc
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
+# Power
+TARGET_USES_CM_POWERHAL := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/htc/pyramid/sepolicy
