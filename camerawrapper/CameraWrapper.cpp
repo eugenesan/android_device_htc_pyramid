@@ -95,6 +95,9 @@ static char * camera_fixup_getparams(int id, const char * settings)
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
 
+    if (id==0)
+        params.set(android::CameraParameters::KEY_SUPPORTED_FOCUS_MODES, "fixed");
+
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
 
