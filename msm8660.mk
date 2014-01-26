@@ -38,9 +38,6 @@ PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 # Audio
-# PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
-
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.msm8660 \
@@ -85,10 +82,6 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libstagefrighthw
 
-# HDMI
-PRODUCT_PACKAGES += \
-    hdmid
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
@@ -104,10 +97,8 @@ PRODUCT_PACKAGES += \
 
 # Media configuration
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/htc/pyramid/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/pyramid/configs/media_profiles.xml:system/etc/media_profiles.xml
-
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
