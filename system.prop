@@ -27,6 +27,11 @@ ro.ril.set.mtu1472=1
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=160
 #
+# GooManager
+ro.goo.developerid=sultanxda
+ro.goo.rom=SennyCM11pyramid
+ro.goo.board=pyramid
+#
 # Power Saving/Sleep
 #
 ro.ril.disable.power.collapse=0
@@ -49,14 +54,8 @@ ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
 view.scroll_friction=0
 #
-# GooManger
-#
-ro.goo.developerid=dominos_liberty	
-ro.goo.rom=Coolrom
-#
 #### AUTO-ROTATE LOCKSCREEN ####
 # (uncomment below line to enable)
 #lockscreen.rot_override=true
 #
 #
-
