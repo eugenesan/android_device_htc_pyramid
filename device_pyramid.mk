@@ -26,10 +26,13 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
 PRODUCT_PACKAGES += \
     gps.pyramid
 
-# Wifi
+# The GPS config appropriate for this device
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
+
+# WiFi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
-# Bluetooth/wifi Firmware
+# Bluetooth/WiFi Firmware
 $(call inherit-product-if-exists, device/htc/pyramid/bcm_hcd.mk)
 
 # Boot ramdisk setup
