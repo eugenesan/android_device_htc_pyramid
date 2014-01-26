@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libstagefrighthw
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8660
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
