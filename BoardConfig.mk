@@ -87,7 +87,10 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 BOARD_EGL_CFG := device/htc/pyramid/configs/egl.cfg
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
+
+# QCOM BSP (Board Support Package)
 TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Filesystem
 BOARD_VOLD_MAX_PARTITIONS := 36
