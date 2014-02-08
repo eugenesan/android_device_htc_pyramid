@@ -125,12 +125,6 @@ on boot
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
 
-    # Make OOM settings stricter
-    chown system system /sys/module/lowmemorykiller/parameters/minfree
-    chmod 0666 /sys/module/lowmemorykiller/parameters/minfree
-    write /sys/module/lowmemorykiller/parameters/minfree 10342,13025,15708,18585,38400,46080
-    chmod 0444 /sys/module/lowmemorykiller/parameters/minfree
-
     # audio
     mkdir /data/audio 2770 media audio
 
