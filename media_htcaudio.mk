@@ -13,7 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 PRODUCT_PROPERTY_OVERRIDES += \
       htc.audio.alt.enable=0 \
       htc.audio.hac.enable=0
+endif

@@ -1,3 +1,4 @@
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 ifeq ($(BOARD_VENDOR),htc)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8660)
 
@@ -15,3 +16,4 @@ include $(BUILD_SHARED_LIBRARY)
 
 endif # TARGET_BOARD_PLATFORM
 endif # BOARD_VENDOR
+endif

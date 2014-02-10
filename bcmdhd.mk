@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 # This file is for bcmdhd wifi since so many HTC 8660 devices use it
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 BOARD_HOSTAPD_DRIVER             := NL80211
@@ -28,3 +29,4 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 # Broadcom BCM43xx chips are WiFi/BT capable
 BOARD_HAVE_BLUETOOTH             := true
 BOARD_HAVE_BLUETOOTH_BCM         := true
+endif

@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 ifeq ($(TARGET_PROVIDES_LIBLIGHTS),true)
 ifeq ($(BOARD_VENDOR),htc)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8660)
@@ -36,3 +37,4 @@ include $(BUILD_SHARED_LIBRARY)
 endif # TARGET_BOARD_PLATFORM
 endif # BOARD_VENDOR
 endif # TARGET_PROVIDES_LIBLIGHTS
+endif
