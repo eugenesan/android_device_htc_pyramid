@@ -11,10 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 # Copy Bluetooth firmware, since BCM4329 is a BT/WiFi chip
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/firmware/bcm4330.hcd:system/vendor/firmware/bcm4330.hcd \
     device/htc/pyramid/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
-endif

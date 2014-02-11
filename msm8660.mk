@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
     device/htc/pyramid/prebuilt/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
@@ -120,4 +119,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     ro.opengles.version=131072
-endif
