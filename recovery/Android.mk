@@ -1,3 +1,4 @@
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),pyramid)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -63,4 +64,5 @@ LOCAL_MODULE_CLASS	:= EXECUTABLES
 LOCAL_SRC_FILES		:= sbin/detect_key
 LOCAL_MODULE_PATH	:= $(TARGET_RECOVERY_ROOT_OUT)/sbin
 include $(BUILD_PREBUILT)
+endif
 
