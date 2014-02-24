@@ -118,4 +118,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
-    ro.opengles.version=131072
+    ro.opengles.version=131072 \
+    debug.egl.recordable.rgba8888=1
