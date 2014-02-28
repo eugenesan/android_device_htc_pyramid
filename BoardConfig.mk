@@ -37,7 +37,7 @@ BUILD_KERNEL := true
 TARGET_KERNEL_CONFIG := senny_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/pyramid
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pyramid/include
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1 androidboot.selinux=permissive
 TARGET_LINARO_TOOLCHAIN_DATE := 2014.01
 
 # Board
@@ -74,10 +74,9 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/pyramid/bluetooth/vnd_msm8660.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/pyramid/bluetooth/include
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/pyramid/bluetooth/vnd_pyramid.txt
+BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Graphics
 USE_OPENGL_RENDERER := true
