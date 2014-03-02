@@ -37,7 +37,7 @@ BUILD_KERNEL := true
 TARGET_KERNEL_CONFIG := senny_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/pyramid
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pyramid/include
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 TARGET_LINARO_TOOLCHAIN_DATE := 2014.01
 
 # Board
