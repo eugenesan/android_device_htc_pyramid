@@ -1,7 +1,6 @@
 #
-# system.prop for villec2
+# Pyramid system.prop
 #
-
 ro.sf.lcd_density=240
 #
 # NETWORK/DATA/RADIO
@@ -55,7 +54,9 @@ ro.min.fling_velocity=8000
 view.scroll_friction=0
 #
 #### AUTO-ROTATE LOCKSCREEN ####
-# (uncomment below line to enable)
+# (uncomment line below to enable)
 #lockscreen.rot_override=true
 #
+#
+# END_PYRAMID_SYSTEM_PROPERTIES
 #

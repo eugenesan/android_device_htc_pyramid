@@ -76,18 +76,3 @@ case "$emmc_boot"
         chown system /sys/devices/platform/rs300100a7.65536/sync_sts
     ;;
 esac
-
-# Post-setup services
-case "$target" in
-    "msm8660")
-        start mpdecision
-    ;;
-esac
-
-# Wake-on-Volume
-case "$target" in
-    "msm8960")
-        echo 1 > /sys/keyboard/vol_wakeup
-    ;;
-esac
-
