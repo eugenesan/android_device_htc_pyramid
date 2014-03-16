@@ -15,9 +15,6 @@ on init
     symlink /storage/usbdisk /usbdisk
     symlink /storage/usbdisk /mnt/usbdisk
 
-    setprop ro.usb.idproduct.ums 0cec
-    setprop ro.usb.idproduct.rndis 0cec
-
     # load msm8660 firmware so things have time to initialize
     rm /vendor
     mkdir /vendor 0771 system system
@@ -130,7 +127,7 @@ on boot
 
     # radio
     mkdir /data/radio 2770 radio radio
-    mkdir /dev/radio 777 radio radio
+    mkdir /dev/radio 0770 radio radio
 
     # liblights
     chown system system /sys/class/leds/green/brightness
@@ -188,15 +185,6 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --no2bytes \
     disabled
     oneshot
 
-#sdcard daemon
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
-    class late_start
-    disabled
-
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
-      class late_start
-      disabled
-
 service hdmid /system/bin/hdmid
     class main
     socket hdmid stream 0660 root system graphics
@@ -211,10 +199,6 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp --single_core_while_panel_off
-    user root
-    disabled
-
 service netmgrd /system/bin/netmgrd
     class main
 
@@ -222,11 +206,6 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     class main
     user root
     disabled
-
-#service qcom-sh /system/bin/sh /init.qcom.sh
-#    class core
-#    user root
-#    oneshot
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
@@ -253,6 +232,14 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
+
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
+    class late_start
+    disabled
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
