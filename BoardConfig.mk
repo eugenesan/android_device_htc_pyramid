@@ -127,6 +127,9 @@ COMMON_GLOBAL_CFLAGS += -DHTCLOG
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
+# Hardware tunables
+BOARD_HARDWARE_CLASS := device/htc/pyramid/cmhw/
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/htc/pyramid/sepolicy
