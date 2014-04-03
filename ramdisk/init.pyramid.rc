@@ -173,6 +173,10 @@ on boot
     chown system /sys/devices/platform/rs300000a7.65536/force_sync
     chown system /sys/devices/platform/rs300000a7.65536/sync_sts
 
+    #Vibrator
+    chown system system /sys/devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-vib/amp
+    chmod 0660 /sys/devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-vib/amp
+
 # Services start here
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
@@ -180,12 +184,8 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
     disabled
     oneshot
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --no2bytes \
-        --tosleep 50000 --baudrate 3000000 --use_baudrate_for_download \
-        --patchram /system/etc/firmware/BCM4330B1_002.001.003.0833.0845.hcd /dev/ttyHS0
+service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
     class main
-    user bluetooth
-    group bluetooth net_bt_admin
     disabled
     oneshot
 
