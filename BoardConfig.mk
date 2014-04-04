@@ -36,7 +36,7 @@ TARGET_KERNEL_CONFIG := senny_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/pyramid
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 
 # Architecture
