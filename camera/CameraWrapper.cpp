@@ -106,6 +106,8 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
     params.set(android::CameraParameters::KEY_FACE_DETECTION, "off");
+    params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "54.8");
+    params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "42.5");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
@@ -132,6 +134,8 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
     params.set(android::CameraParameters::KEY_FACE_DETECTION, "off");
+    params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "54.8");
+    params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "42.5");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
