@@ -141,12 +141,11 @@ BOARD_SEPOLICY_UNION += \
     domain.te \
     drmserver.te \
     file_contexts \
-    files \
     file.te \
     hci_init.te \
     healthd.te \
-    init.te \
     init_shell.te \
+    init.te \
     keystore.te \
     kickstart.te \
     mediaserver.te \
@@ -154,10 +153,8 @@ BOARD_SEPOLICY_UNION += \
     surfaceflinger.te \
     system.te \
     ueventd.te \
-    untrusted_app.te \
-    vold.te \
-    wpa.te \
-    wpa_socket.te
+    wpa_socket.te \
+    wpa.te
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/pyramid/ramdisk/fstab.pyramid
