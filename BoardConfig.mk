@@ -144,7 +144,10 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 BOARD_USES_LEGACY_MMAP := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+-include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    device/htc/pyramid/sepolicy
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true

@@ -1,0 +1,2 @@
+allow sysinit system_data_file:file { open write append };
+allow sysinit app_data_file:dir search;

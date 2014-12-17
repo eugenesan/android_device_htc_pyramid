@@ -1,0 +1,4 @@
+allow netmgrd netmgrd:packet_socket rw_socket_perms;
+allow netmgrd system_data_file:sock_file write;
+allow netmgrd system_data_file:dir remove_name;
+allow netmgrd self:process execmem;
