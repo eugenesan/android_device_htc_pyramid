@@ -10,3 +10,9 @@ allow untrusted_app radio_data_file:dir { getattr search };
 allow untrusted_app radio_data_file:lnk_file read;
 allow untrusted_app debuggerd_exec:file { read getattr };
 allow untrusted_app sysfs_thermal:dir search;
+
+allow untrusted_app block_device:dir search;
+allow untrusted_app block_device:blk_file getattr;
+allow untrusted_app mmc_block_device:blk_file getattr;
+allow untrusted_app asec_image_file:dir getattr;
+allow untrusted_app apk_private_data_file:dir getattr;

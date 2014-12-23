@@ -1,4 +1,11 @@
 allow sysinit self:capability dac_override;
+#allow sysinit system_data_file:file { open write append execute };
 allow sysinit system_data_file:file { open write append };
+allow sysinit system_data_file:dir { open read write add_name };
+allow sysinit property_data_file:dir search;
+allow sysinit block_device:dir search;
+allow sysinit block_device:blk_file getattr;
+allow sysinit servicemanager_exec:file { read open execute };
 allow sysinit app_data_file:dir search;
 allow sysinit app_data_file:file { read open getattr execute_no_trans ioctl };
+#allow sysinit rootfs:filesystem remount;
