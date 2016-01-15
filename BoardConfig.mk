@@ -121,6 +121,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_DEVICE_DIRS += device/htc/pyramid
 TARGET_RECOVERY_FSTAB := device/htc/pyramid/rootdir/etc/fstab.pyramid
+RECOVERY_SDCARD_ON_DATA := true
 
 # Required for Sensors
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
@@ -184,3 +185,5 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
 TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+TW_INTERNAL_STORAGE_PATH := /sdcard"
+TW_EXTERNAL_STORAGE_PATH := /sdcard1"
