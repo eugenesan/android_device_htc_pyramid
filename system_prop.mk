@@ -51,7 +51,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thermal
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.thermal.monitor=true
-
-# By default, primary storage is physical
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vold.primary_physical=1
