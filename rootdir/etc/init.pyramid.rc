@@ -45,7 +45,24 @@ on fs
    # link widevine drm library path
     symlink /system/vendor/lib /vendor/lib
 
+    # Create dalvik-cache partition mount point
+    mkdir /dc 0771 system system
+
     mount_all /remount.pyramid
+
+    # Make sure relocated dalvik-cache is complete and have correct permissions
+    mkdir /dc/dalvik-cache 0771 root root
+    mkdir /dc/dalvik-cache/profiles 0711 system system
+    chown system system /data/dalvik-cache/profiles
+    chmod 711 /data/dalvik-cache/profiles
+    chown root root /dc/dalvik-cache
+    chmod 0771 /dc/dalvik-cache
+    chown system system /data/dalvik-cache/profiles
+    chmod 711 /data/dalvik-cache/profiles
+    restorecon_recursive /dc
+    chown root root /data/dalvik-cache
+    chmod 0771 /data/dalvik-cache
+    restorecon_recursive /data/dalvik-cache
 
 on post-fs
     # Support legacy paths
