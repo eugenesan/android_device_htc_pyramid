@@ -50,7 +50,6 @@ on enable-low-power
 
     rm /data/system/default_values
 
-
 on class_start:late_start
     trigger enable-low-power
 
