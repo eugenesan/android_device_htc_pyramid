@@ -4,6 +4,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/recovery		/recovery	emmc	defaults				defaults
 /dev/block/platform/msm_sdcc.1/by-name/userdata		/system		ext4	defaults				defaults
 /dev/block/platform/msm_sdcc.3/mmcblk1			/data		ext4	defaults				defaults	twrp=encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
-/dev/block/platform/msm_sdcc.1/by-name/system		/cache		ext4	defaults				defaults
+/dev/block/platform/msm_sdcc.1/by-name/cache		/cache		ext4	defaults				defaults
+/dev/block/platform/msm_sdcc.1/by-name/system		/dc		ext4	defaults				defaults	twrp=display="Dalvik Cache";wipeingui
 /dev/block/platform/msm_sdcc.1/by-name/misc		/misc		emmc	defaults				defaults
 /dev/block/sda1						/usb0		vfat	defaults				defaults	twrp=display="USB OTG";storage;wipeingui;removable

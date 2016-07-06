@@ -1,5 +1,5 @@
 # Android fstab file.
-#<src>						<mnt_point>	<type>	<mnt_flags>							<fs_mgr_flags>
+#<src>						<mnt_point>	<type>	<mnt_flags>								<fs_mgr_flags>
 #/dev/block/platform/msm_sdcc.1/by-name/dsps	/firmware_dsps	vfat	ro,shortname=lower							wait
 /dev/block/platform/msm_sdcc.1/by-name/radio	/firmware_radio	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0			wait
 /dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware_q6	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0			wait
@@ -10,8 +10,8 @@
 /dev/block/platform/msm_sdcc.1/by-name/misc	/misc		emmc	defaults								defaults
 /dev/block/platform/msm_sdcc.1/by-name/devlog	/devlog		ext4	noatime,nosuid,nodev,barrier=0						wait
 /dev/block/platform/msm_sdcc.1/by-name/userdata	/system		ext4	rw,noatime,barrier=0							wait
-/dev/block/platform/msm_sdcc.1/by-name/system	/cache		ext4	noatime,nosuid,nodev,barrier=0,journal_async_commit			wait,check,formattable
-/dev/block/platform/msm_sdcc.1/by-name/system	/cache		f2fs	rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr			wait,check,formattable
+/dev/block/platform/msm_sdcc.1/by-name/cache	/cache		ext4	noatime,nosuid,nodev,barrier=0,journal_async_commit			wait,check,formattable
+/dev/block/platform/msm_sdcc.1/by-name/cache	/cache		f2fs	rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr			wait,check,formattable
 /dev/block/platform/msm_sdcc.3/mmcblk1		/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0,journal_async_commit	wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 /dev/block/platform/msm_sdcc.3/mmcblk1		/data		f2fs	rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr			wait,check,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 
