@@ -1,4 +1,0 @@
-# Android fstab file.
-#<src>						<mnt_point>	<type>	<mnt_flags>								<fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/system	/dc		ext4	noatime,nosuid,nodev,barrier=0,journal_async_commit			wait,check,formattable
-/dev/block/platform/msm_sdcc.1/by-name/system	/dc		f2fs	rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr			wait,check,formattable

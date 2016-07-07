@@ -40,21 +40,27 @@ on fs
     # Force loading of modem and Q6 images
     write /dev/smd_pkt_loopback 1
 
-    # link widevine drm library path
+    # Link widevine drm library path
     symlink /system/vendor/lib /vendor/lib
+
+    # Create dalvik-cache partition mount point
+    mkdir /dc 0771 system system
 
     mount_all /remount.pyramid
 
-    # Create dalvik-cache, so as to enforce our permissions
-    mkdir /dc 0771 system system
-    mount_all /fstab.dc.pyramid
+    # Make sure relocated dalvik-cache is complete and have correct permissions
     mkdir /dc/dalvik-cache 0771 root root
     mkdir /dc/dalvik-cache/profiles 0711 system system
-    symlink /dc/dalvik-cache /data/dalvik-cache
-    # Make sure symlink and /dc have correct permissions (might be redundant)
+    chown system system /data/dalvik-cache/profiles
+    chmod 711 /data/dalvik-cache/profiles
+    chown root root /dc/dalvik-cache
+    chmod 0771 /dc/dalvik-cache
+    chown system system /data/dalvik-cache/profiles
+    chmod 711 /data/dalvik-cache/profiles
+    restorecon_recursive /dc
     chown root root /data/dalvik-cache
     chmod 0771 /data/dalvik-cache
-    restorecon_recursive /dc
+    restorecon_recursive /data/dalvik-cache
 
 on post-fs
     # Support legacy paths
