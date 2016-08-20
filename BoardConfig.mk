@@ -151,6 +151,7 @@ RECOVERY_SDCARD_ON_DATA := true
 
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
+WITH_CM_CHARGER := false
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
